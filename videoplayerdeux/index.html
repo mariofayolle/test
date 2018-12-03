@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <title>Peaky Blinders player</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="player">
+                <div class="container-top-controls">
+                    <div class="icon-volume"><img src="images/speaker-on.png" alt=""></div>
+                    <div class="container-volume">
+                        <div class="fill"></div>
+                    </div>
+                    <div class="settings">
+                        <img class="settings-controls" src="images/settings.png" alt="Settings" width="18">
+                        <div class="container-quality">
+                            <div class="low-quality">SD</div>
+                            <div class="border-quality"></div>
+                            <div class="hd-quality">HD</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-right-middle">
+                    <div class="info-serie">
+                        <div class="content-info-serie">
+                            <div class="titre-info">
+                                <h1>Peaky Blinders</h1>
+                            </div>
+                            <div class="mark-info">
+                                <img class='mark' src="images/stars.png" alt="" width="120">
+                            </div>
+                            <div class="pre-info">
+                                <p>Etats-Unis, 2016, 01 minutes</p>
+                                <p>Disponible jusqu'au 07/12/2018</p>
+                            </div>
+                            <div class="main-info">
+                                <p>
+                                    En 1919, à Birmingham, soldats, révolutionnaires politiques et criminels combattent pour se faire une place dans le paysage industriel de l'après-Guerre. Le Parlement s'attend à une violente révolte, et Winston Churchill mobilise des forces spéciales pour contenir les menaces.
+                                </p>
+                            </div>
+                            <div class="footer-info">
+                                <p>De : Steven Knight</p>
+                                <p>Avec : Cillian Murphy (Tommy Shelby), Helen McCrory (Tante Polly Gray)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <img class='icon-info' src="images/information.png" alt="" width="30">
+                    </div>
+                </div>
+                <div class="container-bottom-controls">
+                        <div class="seek-time">
+                            <div class="container-thumbnail-current">
+                                <div class="thumbnail-current-time"></div>
+                            </div>
+                            <div class="fill-time"></div>
+                            <div class="cursor-time"></div>
+                        </div>
+                        <div class="return-button">
+                            <img src="images/return.png" alt="return past" width="18">
+                        </div>
+                        <div class="time-passing-button">
+                            <img src="images/time-passing.png" alt="time passing" width="20">
+                        </div>
+                    	<div class="btn play">
+                    		<span class="bar bar-1"></span>
+                    		<span class="bar bar-2"></span>
+                    	</div>
+                        <div class="container-time">
+                            <span class='time current-time'></span>
+                            <span class='time duration-time'>00:00</span>
+                       </div>
+                       <div class="screen-button">
+                           <img class='fullscreenbutton' src="images/resize-arrows.png" alt="full screen button" width="16">
+                           <img class='exitfullscreen' src="images/exitscreen.png" alt="full screen button" width="16">
+                       </div>
+                </div>
+                <video class='video' src="audio-video/PeakyBlinders480.mp4" type="video/webm" width="600"  poster="images/shelby.png">
+
+                </video>
+            </div>
+        </div>
+
+    <script src="scripts/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,402 @@
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .player
+{
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 9px 13px 91px 0px rgba(0,0,0,0.75);
+
+}
+
+.player .video
+{
+    width: 100%;
+    height: 100%;
+}
+
+.player .container-bottom-controls
+{
+    position: absolute;
+    height: 45px;
+    width: 100%;
+    bottom: 0%;
+    z-index: 800;
+    transform: translateY(0px);
+    transition: 1s;
+    background: black;
+}
+
+
+.container-bottom-controls .seek-time
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 11px;
+    background: #cccccc;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.container-bottom-controls .seek-time .fill-time
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(97, 215, 168);
+    transform-origin: 0 0;
+    will-change: transform;
+    transform: scaleX(0);
+    z-index: 2500;
+}
+
+.container-bottom-controls .seek-time .cursor-time
+{
+    position: absolute;
+    top: -15%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: white;
+    z-index: 2600;
+    will-change: transform;
+    transform-origin: 0 0;
+    transform: translateX(0);
+}
+
+
+/* .player .container-bottom-controls:hover
+{
+    box-shadow: inset -4px -140px 300px -10px rgba(0,0,0,0.16);
+    transition: all 1s;
+} */
+
+.btn
+{
+  position: absolute;
+  left: 50%;
+  top: 14px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: border 0.1s ease-in-out;
+  z-index: 101
+}
+
+
+.btn:hover .bar
+{
+  background-color: rgb(97, 215, 168);
+}
+.btn .bar
+{
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  width: 2px;
+  height: 18px;
+  border-radius: 3px;
+  background-color: white;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  transition: background 0.1s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, background 0.1s ease-in-out;
+  transition: transform 0.4s ease-in-out, background 0.1s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.btn.pause .bar-1
+{
+  -webkit-transform: translateX(13.5px) translateY(0px) rotate(0deg);
+  transform: translateX(13.5px) translateY(0px) rotate(0deg);
+}
+.btn.pause .bar-2
+{
+  -webkit-transform: translateX(24px) translateY(0px) rotate(0deg);
+  transform: translateX(24px) translateY(0px) rotate(0deg);
+}
+.btn.play .bar-1
+{
+  -webkit-transform: translateX(20px) translateY(-5px) rotate(-55deg);
+  transform: translateX(20px) translateY(-5px) rotate(-55deg);
+}
+.btn.play .bar-2
+{
+  -webkit-transform: translateX(20px) translateY(5px) rotate(-125deg);
+  transform: translateX(20px) translateY(5px) rotate(-125deg);
+}
+
+.container-bottom-controls .container-time
+{
+    position: absolute;
+    top:19px;
+    left: 10px;
+    letter-spacing: 1px;
+}
+
+.container-bottom-controls .time
+{
+    font-size: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    z-index: 100;
+}
+
+
+.container-top-controls .container-volume
+{
+    position: absolute;
+    top: 10.5px;
+    left: 31px;
+    width: 70px;
+    height: 10px;
+    background: #cccccc;
+    z-index: 1200;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.container-top-controls .container-volume .fill
+{
+    height: 100%;
+    width: 100%;
+    background: rgb(97, 215, 168);
+    transform-origin: 0 0;
+    will-change: transform;
+    transform: scaleX(0.5);
+    z-index: 800;
+    cursor: pointer;
+    transition: transform 0.5s;
+    border-radius: 20px;
+}
+
+.container-top-controls .icon-volume img
+{
+    position: absolute;
+    top: 8.5px;
+    left: 10px;
+    width: 15px;
+    z-index: 2600;
+    cursor: pointer;
+}
+
+
+.container-bottom-controls .return-button
+{
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.container-bottom-controls .time-passing-button
+{
+    position: absolute;
+    top: 35%;
+    left: 54.5%;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.container-bottom-controls .screen-button
+{
+    position: absolute;
+    top: 20px;
+    left: 97%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.container-bottom-controls .screen-button .exitfullscreen
+{
+    display: none;
+}
+.container-bottom-controls .screen-button .fullscreenbutton
+{
+    display: block;
+}
+
+.player .container-right-middle
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.player .container-right-middle .info-serie
+{
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1000;
+    transition: all 1s;
+}
+
+
+.player .container-right-middle .info
+{
+    position: absolute;
+    left: 97%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.info-serie .content-info-serie
+{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+}
+.content-info-serie .titre-info
+{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    color: white;
+    font-size: 17px;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-top: 5%;
+}
+.content-info-serie .mark-info
+{
+    position: relative;
+    left: 60px;
+    top: 40px;
+}
+.content-info-serie .pre-info
+{
+    position: relative;
+    left: 10px;
+    top: 50px;
+    font-size: 13px;
+    color: white;
+    line-height: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.content-info-serie .main-info
+{
+    position: relative;
+    left: 10px;
+    top: 70px;
+    color: white;
+    font-size: 15px;
+    padding-right: 15px;
+    line-height: 18px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.content-info-serie .footer-info
+{
+    position: relative;
+    left: 10px;
+    top: 80px;
+    color: white;
+    font-size: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.player .container-top-controls
+{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.container-top-controls .settings
+{
+    position: absolute;
+    top: 50%;
+    left: 96%;
+    transform : translateY(-50%);
+    z-index: 1700;
+    cursor: pointer;
+}
+
+.container-bottom-controls .container-thumbnail-current
+{
+    position: absolute;
+    left: 0%;
+    top: -25px;
+    width: 45px;
+    height: 15px;
+    opacity: 0;
+}
+
+.container-bottom-controls .thumbnail-current-time
+{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    color: white;
+    opacity: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.container-top-controls .container-quality
+{
+    position: relative;
+    top: 31px;
+    left: -12px;
+    width: 44px;
+    height: 26px;
+    position: absolute;
+    transform: rotate(90deg);
+    display: none;
+}
+
+.container-top-controls .container-quality .low-quality
+{
+    position: relative;
+    right: 13px;
+    bottom: 6px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Nanum Gothic', sans-serif;
+    transform: rotate(-90deg);
+    z-index: 1800;
+}
+
+.container-top-controls .container-quality .border-quality
+{
+    position: relative;
+    right: -11px;
+    bottom: -1px;
+    width: 17px;
+    height: 1px;
+    background: rgb(97, 215, 168);
+    transform: rotate(-90deg);
+}
+
+
+.container-top-controls .container-quality .hd-quality
+{
+    position: relative;
+    right: -8px;
+    bottom: 19px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Nanum Gothic', sans-serif;
+    transform: rotate(-90deg);
+    z-index: 1800;
+}
